@@ -1,0 +1,77 @@
+
+<!---
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label aria-required="Nombre">Nombre Completo</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>País</mat-label>
+        <mat-select>
+          <mat-option value="one">Chile</mat-option>
+          <mat-option value="two">Colombia</mat-option>
+          <mat-option value="two">Brazil</mat-option>
+          <mat-option value="two">Argentina</mat-option>
+          <mat-option value="two">Francia</mat-option>
+          <mat-option value="two">Italia</mat-option>
+          <mat-option value="two">España</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Observación</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+
+    <section>
+        <button mat-button>Enviar</button>
+    </section>
+</div>   
+
+-->
+<div *ngIf="opcion == 1">
+    <mat-card class="contact-card">
+        <mat-card-content>
+            <form [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input matInput  formControlName="nombre" ngModel required>
+                </mat-form-field>
+                <br>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>País</mat-label>
+                    <mat-select  formControlName="pais" ngModel required>
+                    <mat-option value="1">Chile</mat-option>
+                    <mat-option value="2">Colombia</mat-option>
+                    <mat-option value="3">Brazil</mat-option>
+                    <mat-option value="4">Argentina</mat-option>
+                    <mat-option value="5">Francia</mat-option>
+                    <mat-option value="6">Italia</mat-option>
+                    <mat-option value="7">España</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Observación</mat-label>
+                    <textarea matInput formControlName="message" ngModel required>
+                    </textarea>
+                </mat-form-field>
+                <br>
+
+                <!-- no deja presionar el boton si no estan los datos llenos:-->
+                <button id="submit" mat-raised-button type="submit" [disabled]="form.invalid" >Enviar</button>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div *ngIf="opcion == 2">
+
+    <span>Su queja fue recibida. Muy pronto nos estaremos comunicando con usted.</span>
+
+</div>

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  text-align: center;
+}
+
+#imagenT {
+  width: 300px;
+  max-height: 420px;
+}
+
+/*Grid*/
+mat-grid-list {
+  background-color: white;
+}
+
+.mat-listClass {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+mat-grid-tile {
+  background-color: black;
+}
+
+.mat-liteClass {
+  background-color: white;
+}
+
+/*Card*/
+mat-card-header {
+  float: center;
+  display: block;
+}
+
+.example-card {
+  background-color: black;
+  padding: 5%;
+}
+
+.footerCard {
+  margin-top: 8%;
+}
+
+/* Diseño igual al de la imagen, con fondo blanco y borde negro//
+    .example-card{
+        background-color: white;
+        padding: 5%;
+        border: 2px solid #000;
+        color:black;
+    }
+*/
+/*# sourceMappingURL=libros.component.css.map */

@@ -1,0 +1,23 @@
+<nav> 
+    
+    <div id="logo"> Mis libros </div>
+    
+    <div id="Menu">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active">
+            <button mat-raised-button id="boton">
+                <i id="iconHome" class="fas fa-home"></i>
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" class="iconHome">home</mat-icon> -->
+            Inicio</button> 
+        </a>
+
+        <a [routerLink]="['/libros']" routerLinkActive="router-link-active"  id="boton">
+            <button mat-raised-button>Libros</button>
+        </a>
+
+        <a [routerLink]="['/quejas']" routerLinkActive="router-link-active"  id="boton">
+            <button mat-raised-button>Quejas</button>
+        </a>
+
+    </div>
+
+</nav>

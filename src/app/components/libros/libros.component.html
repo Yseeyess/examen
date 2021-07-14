@@ -1,0 +1,27 @@
+<mat-grid-list class="mat-listClass" cols="4" rowHeight="600px" >
+    <ul>
+        <li *ngFor="let item of Lista">
+            <mat-grid-tile class="mat-liteClass" >
+
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title class="nombreLibro"> {{item.nombre}}</mat-card-title>
+                    </mat-card-header>
+
+                    
+                    <img id= imagenT src="/assets/{{item.imagen}}" >
+                <!--    <img id= imagenT src="/assets/{{item.imagen}}" style="object-fit: cover; height: inherit; width: inherit;">     -->
+                <!--    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">    -->
+                    
+                    <mat-card-footer class=footerCard>
+                        <p> Autor: {{item.autor}} </p>
+                        <p> Páginas: {{item.paginas}} </p>
+                    </mat-card-footer>
+
+                  </mat-card>
+            
+            </mat-grid-tile>
+        </li>
+    </ul>
+</mat-grid-list>
+  
